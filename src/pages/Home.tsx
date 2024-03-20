@@ -1,6 +1,6 @@
 import type { RootState } from '../redux/Store'
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../redux/features/counter/counterSlice'
+import { decrement, increment, incrementByAmount } from '../redux/features/counter/counterSlice'
 
 const Home = () => {
 
@@ -12,6 +12,9 @@ const Home = () => {
       <div>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"   onClick={() => dispatch(increment())}>
           Increament
+        </button>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"   onClick={() => dispatch(incrementByAmount(5))}>
+          IncreamentByAmount
         </button>
   
       <div>
